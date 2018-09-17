@@ -5,14 +5,14 @@ import java.util.Collections;
 
 public class SimpleBookManager implements BookManagerInterfaces {
 
-    ArrayList<Book> bookList = new ArrayList<>();
+    private ArrayList<Book> bookList = new ArrayList<>();
 
     public SimpleBookManager() {
-        createBook("XYZ","title",100,"233874643","mobile devices");
-        createBook();
-        createBook();
-        createBook();
-        createBook();
+        createBook("aaa","title1",100,"0123456789111","mobile devices 1" );
+        createBook("bbb","title2",200,"0123456789222","mobile devices 2" );
+        createBook("ccc","title3",300,"0123456789333","mobile devices 3" );
+        createBook("ddd","title4",400,"0123456789444","mobile devices 4" );
+        createBook("eee","title5",500,"0123456789555","mobile devices 5" );
     }
 
     @Override
@@ -34,7 +34,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
     //this a overloading method to create books with data
 
     public Book createBook(String author, String title, int price, String isbn, String course) {
-        Book InstanceOfBook = new Book();
+        Book InstanceOfBook = new Book( author, title, price, isbn, course );
         bookList.add(InstanceOfBook);
         return InstanceOfBook;
     }
