@@ -9,7 +9,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
 
     public SimpleBookManager() {
         createBook("aaa","title1",100,"0123456789111","mobile devices 1" );
-        createBook("bbb","title2",200,"0123456789222","mobile devices 2" );
+        createBook("bbb","title2",239,"0123456789222","mobile devices 2" );
         createBook("ccc","title3",300,"0123456789333","mobile devices 3" );
         createBook("ddd","title4",400,"0123456789444","mobile devices 4" );
         createBook("eee","title5",500,"0123456789555","mobile devices 5" );
@@ -31,7 +31,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
         bookList.add(InstanceOfBook);
         return InstanceOfBook;
     }
-    //this a overloading method to create books with data
+    //this is a overloading method to create books with data
 
     public Book createBook(String author, String title, int price, String isbn, String course) {
         Book InstanceOfBook = new Book( author, title, price, isbn, course );
@@ -60,7 +60,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
         for (int i = 0; i < bookList.size(); i++) {
             Book book = (bookList.get(i));
             if (i == 0) minValue = book.getPrice();
-            if (book.getPrice() > minValue) minValue = book.getPrice();
+            if (book.getPrice() < minValue) minValue = book.getPrice();
         }
         return minValue;
     }
