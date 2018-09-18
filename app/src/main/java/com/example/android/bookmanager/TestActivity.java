@@ -12,7 +12,7 @@ public class TestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test);
         SimpleBookManager simpleBookManager = new SimpleBookManager();
         int qty = simpleBookManager.getMaxPrice();
-       // Log.d("MyLog", "There is: " + qty + "book/s");
+        // Log.d("MyLog", "There is: " + qty + "book/s");
         Log.d("MyLog", "Max price: " + qty );
     }
 }

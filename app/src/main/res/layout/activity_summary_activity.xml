@@ -1,44 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SummaryActivity">
 
     <TextView
-        android:id="@+id/counter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_margin="8dp"
-        android:id="@+id/labelCost"
-        android:text="Total cost:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="8dp"
-        android:id="@+id/mostExpensive"
-        android:layout_below="@id/labelCost"
-        android:text="Most expensive item:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:layout_margin="8dp"
-        android:id="@+id/leastExpensive"
-        android:layout_below="@id/mostExpensive"
-        android:text="Least expensive item:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/avgPrice"
-        android:text="AveragePrice:"
-        android:layout_below="@+id/leastExpensive"
+        android:id="@+id/costLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:text="Total cost:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/countValue" />
+
+    <TextView
+        android:id="@+id/mostExpensiveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="Most expensive item:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costLabel" />
+
+    <TextView
+        android:id="@+id/LeastExpensiveLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="Least Expensive Item"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mostExpensiveLabel" />
+
+    <TextView
+        android:id="@+id/avgPriceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:text="AveragePrice:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LeastExpensiveLabel" />
+
+    <TextView
+        android:id="@+id/countValue"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="160dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/costValue"
+        android:layout_width="50dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/costLabel"
+        app:layout_constraintTop_toTopOf="@+id/costLabel" />
+
+    <TextView
+        android:id="@+id/mostExpensiveValue"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/mostExpensiveLabel"
+        app:layout_constraintTop_toTopOf="@+id/mostExpensiveLabel" />
+
+    <TextView
+        android:id="@+id/leastExpensiveValue"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/LeastExpensiveLabel"
+        app:layout_constraintTop_toTopOf="@+id/LeastExpensiveLabel" />
+
+    <TextView
+        android:id="@+id/avgPriceValue"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/avgPriceLabel"
+        app:layout_constraintTop_toTopOf="@+id/avgPriceLabel" />
 
 
-
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
