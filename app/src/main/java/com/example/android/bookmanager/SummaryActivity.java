@@ -11,8 +11,7 @@ import java.text.NumberFormat;
 public class SummaryActivity extends AppCompatActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary_activity);
 
@@ -22,10 +21,10 @@ public class SummaryActivity extends AppCompatActivity {
 
         // pass data to the views
         TextView textView = findViewById(R.id.countValue);
-        textView.setText( String.valueOf(sbm.count()) );
+        textView.setText(String.valueOf(sbm.count()));
 
         textView = findViewById(R.id.costValue);
-        textView.setText(NumberFormat.getCurrencyInstance().format(sbm.getTotalCost()) );
+        textView.setText(NumberFormat.getCurrencyInstance().format(sbm.getTotalCost()));
 
         textView = findViewById(R.id.mostExpensiveValue);
         textView.setText(NumberFormat.getCurrencyInstance().format(sbm.getMaxPrice()));

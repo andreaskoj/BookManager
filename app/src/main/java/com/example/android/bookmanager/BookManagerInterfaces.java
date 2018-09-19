@@ -14,7 +14,7 @@ public interface BookManagerInterfaces {
 
     public void removeBook(Book book);
 
-    public void moveBook (int from, int to);
+    public void moveBook(int from, int to);
 
     public int getMinPrice();
 

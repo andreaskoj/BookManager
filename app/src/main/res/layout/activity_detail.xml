@@ -151,62 +151,62 @@
             app:layout_constraintTop_toBottomOf="@+id/priceLabel" />
 
         <TextView
-            android:textSize="18sp"
             android:id="@+id/titleValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/titleLabel"
             app:layout_constraintTop_toTopOf="@+id/titleLabel" />
 
         <TextView
-            android:textSize="18sp"
             android:id="@+id/authorValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/authorLabel"
             app:layout_constraintTop_toTopOf="@+id/authorLabel" />
 
         <TextView
-            android:textSize="18sp"
             android:id="@+id/courseValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/courseLabel"
             app:layout_constraintTop_toTopOf="@+id/courseLabel" />
 
         <TextView
-            android:textSize="18sp"
             android:id="@+id/priceValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/priceLabel"
             app:layout_constraintTop_toTopOf="@+id/priceLabel" />
 
         <TextView
-            android:textSize="18sp"
             android:id="@+id/isbnValue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@+id/isbnLabel"
             app:layout_constraintTop_toTopOf="@+id/isbnLabel" />
 
     </android.support.constraint.ConstraintLayout>
 
     <Button
-        android:textColor="#929292"
         android:id="@+id/button"
-        android:background="@drawable/button_books"
-        android:fontFamily="@font/roboto_regular"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/button_books"
+        android:fontFamily="@font/roboto_regular"
         android:onClick="showSummary"
         android:text="summary"
+        android:textColor="#929292"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

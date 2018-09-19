@@ -6,14 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity
-{
+import java.text.NumberFormat;
+
+public class DetailActivity extends AppCompatActivity {
     SimpleBookManager sbm;
     Book book;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
@@ -23,80 +23,75 @@ public class DetailActivity extends AppCompatActivity
     }
 
     // Called when the user taps one of the buttons
-    public void showDetail(View view)
-    {
+    public void showDetail(View view) {
         // Do something in response to button
-        switch (view.getId())
-        {
+        switch (view.getId()) {
             case R.id.b1:
-                book = sbm.getBook(0 );
+                book = sbm.getBook(0);
                 break;
 
             case R.id.b2:
-                book = sbm.getBook(1 );
+                book = sbm.getBook(1);
                 break;
 
             case R.id.b3:
-                book = sbm.getBook(2 );
+                book = sbm.getBook(2);
                 break;
 
             case R.id.b4:
-                book = sbm.getBook(3 );
+                book = sbm.getBook(3);
                 break;
 
             case R.id.b5:
-                book = sbm.getBook(4 );
+                book = sbm.getBook(4);
                 break;
         }
 
         TextView textView;
 
         textView = findViewById(R.id.titleValue);
-        textView.setText( book.getTitle() );
+        textView.setText(book.getTitle());
 
         textView = findViewById(R.id.authorValue);
-        textView.setText( book.getAuthor() );
+        textView.setText(book.getAuthor());
 
         textView = findViewById(R.id.courseValue);
-        textView.setText( book.getCourse() );
+        textView.setText(book.getCourse());
 
         textView = findViewById(R.id.priceValue);
-        textView.setText( String.valueOf( book.getPrice() ) );
+        textView.setText(String.valueOf(NumberFormat.getCurrencyInstance().format(book.getPrice())));
+
 
         textView = findViewById(R.id.isbnValue);
-        textView.setText( book.getIsbn() );
+        textView.setText(book.getIsbn());
     }
 
-    public void showSummary(View view)
-    {
+    public void showSummary(View view) {
         Intent intent = new Intent(this, SummaryActivity.class);
         startActivity(intent);
     }
 
 
-    private void fillFirstItem () {
+    private void fillFirstItem() {
         TextView textView;
 
         textView = findViewById(R.id.titleValue);
-        textView.setText( sbm.getBook(0).getTitle() );
+        textView.setText(sbm.getBook(0).getTitle());
 
         textView = findViewById(R.id.authorValue);
-        textView.setText( sbm.getBook(0).getAuthor() );
+        textView.setText(sbm.getBook(0).getAuthor());
 
         textView = findViewById(R.id.courseValue);
-        textView.setText( sbm.getBook(0).getCourse() );
+        textView.setText(sbm.getBook(0).getCourse());
 
         textView = findViewById(R.id.priceValue);
-        textView.setText( String.valueOf(sbm.getBook(0).getPrice() ) );
+        textView.setText(String.valueOf(NumberFormat.getCurrencyInstance().format(sbm.getBook(0).getPrice())));
 
         textView = findViewById(R.id.isbnValue);
-        textView.setText( sbm.getBook(0).getIsbn() );
-
+        textView.setText(sbm.getBook(0).getIsbn());
 
 
     }
-
-
 
 
 }
