@@ -9,20 +9,11 @@ public class SimpleBookManager implements BookManagerInterfaces {
 
     public SimpleBookManager()
     {
-        createBook("Author 1","Title 1",100,
-                "0123456789111","Mobile Devices 1" );
-
-        createBook("Author 2","Title 2",239,
-                "0123456789222","Mobile Devices 2" );
-
-        createBook("Author 3","Title 3",300,
-                "0123456789333","Mobile Devices 3" );
-
-        createBook("Author 4","Title 4",400,
-                "0123456789444","Mobile Devices 4" );
-
-        createBook("Author 5","Title 5",500,
-                "0123456789555","Mobile Devices 5" );
+        createBook("Bill Bryson","A Short History of Nearly Everything ",145,"0-7679-0817-1","Life" );
+        createBook("Elizabeth Kostova","The Historian",99,"0-316-01177-0","English" );
+        createBook("Andrew S. Tanenbaum","Modern Operating Systems",120," 0132199084","Operating systems" );
+        createBook("Bjarne Stroustrup","The C++ Programming Language",999,"978-0321563842","OOP" );
+        createBook("Collins Gem","SAS Survival Guide Handbook",399," 0060849827","Life" );
     }
 
     @Override
@@ -51,7 +42,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
 
     @Override
     public ArrayList<Book> getAllBooks() {
-        return null;
+        return bookList;
     }
 
     @Override
