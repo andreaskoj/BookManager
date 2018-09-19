@@ -19,6 +19,7 @@ public class DetailActivity extends AppCompatActivity
 
         // create new SimpleBookManager object which has 5 books as default.
         sbm = new SimpleBookManager();
+        fillFirstItem();
     }
 
     // Called when the user taps one of the buttons
@@ -71,4 +72,31 @@ public class DetailActivity extends AppCompatActivity
         Intent intent = new Intent(this, SummaryActivity.class);
         startActivity(intent);
     }
+
+
+    private void fillFirstItem () {
+        TextView textView;
+
+        textView = findViewById(R.id.titleValue);
+        textView.setText( sbm.getBook(0).getTitle() );
+
+        textView = findViewById(R.id.authorValue);
+        textView.setText( sbm.getBook(0).getAuthor() );
+
+        textView = findViewById(R.id.courseValue);
+        textView.setText( sbm.getBook(0).getCourse() );
+
+        textView = findViewById(R.id.priceValue);
+        textView.setText( String.valueOf(sbm.getBook(0).getPrice() ) );
+
+        textView = findViewById(R.id.isbnValue);
+        textView.setText( sbm.getBook(0).getIsbn() );
+
+
+
+    }
+
+
+
+
 }
