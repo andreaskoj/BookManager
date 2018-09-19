@@ -1,30 +1,74 @@
 package com.example.android.bookmanager;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
-public class DetailActivity extends AppCompatActivity {
+public class DetailActivity extends AppCompatActivity
+{
+    SimpleBookManager sbm;
+    Book book;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        TextView titleTextView = (TextView) findViewById(R.id.title);
-        titleTextView.setText("Head First Android Development: A Brain-Friendly Guide");
+        // create new SimpleBookManager object which has 5 books as default.
+        sbm = new SimpleBookManager();
+    }
 
-        TextView authorTextView = (TextView) findViewById(R.id.author);
-        authorTextView.setText("Dawn Griffiths");
+    // Called when the user taps one of the buttons
+    public void showDetail(View view)
+    {
+        // Do something in response to button
+        switch (view.getId())
+        {
+            case R.id.b1:
+                book = sbm.getBook(0 );
+                break;
 
-        TextView courseTextView = (TextView) findViewById(R.id.course);
-        courseTextView.setText("Android apps");
+            case R.id.b2:
+                book = sbm.getBook(1 );
+                break;
 
-        TextView priceTextView = (TextView) findViewById(R.id.price);
-        priceTextView.setText("$30");
+            case R.id.b3:
+                book = sbm.getBook(2 );
+                break;
 
-        TextView isbnTextView = (TextView) findViewById(R.id.isbn);
-        isbnTextView.setText("1449362184");
+            case R.id.b4:
+                book = sbm.getBook(3 );
+                break;
 
+            case R.id.b5:
+                book = sbm.getBook(4 );
+                break;
+        }
+
+        TextView textView;
+
+        textView = findViewById(R.id.titleValue);
+        textView.setText( book.getTitle() );
+
+        textView = findViewById(R.id.authorValue);
+        textView.setText( book.getAuthor() );
+
+        textView = findViewById(R.id.courseValue);
+        textView.setText( book.getCourse() );
+
+        textView = findViewById(R.id.priceValue);
+        textView.setText( String.valueOf( book.getPrice() ) );
+
+        textView = findViewById(R.id.isbnValue);
+        textView.setText( book.getIsbn() );
+    }
+
+    public void showSummary(View view)
+    {
+        Intent intent = new Intent(this, SummaryActivity.class);
+        startActivity(intent);
     }
 }

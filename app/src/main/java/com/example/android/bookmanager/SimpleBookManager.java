@@ -7,12 +7,22 @@ public class SimpleBookManager implements BookManagerInterfaces {
 
     private ArrayList<Book> bookList = new ArrayList<>();
 
-    public SimpleBookManager() {
-        createBook("Bill Bryson","A Short History of Nearly Everything ",100,"0123456789111","mobile devices 1" );
-        createBook("bbb","title2",239,"0123456789222","mobile devices 2" );
-        createBook("ccc","title3",300,"0123456789333","mobile devices 3" );
-        createBook("ddd","title4",400,"0123456789444","mobile devices 4" );
-        createBook("eee","title5",500,"0123456789555","mobile devices 5" );
+    public SimpleBookManager()
+    {
+        createBook("Author 1","Title 1",100,
+                "0123456789111","Mobile Devices 1" );
+
+        createBook("Author 2","Title 2",239,
+                "0123456789222","Mobile Devices 2" );
+
+        createBook("Author 3","Title 3",300,
+                "0123456789333","Mobile Devices 3" );
+
+        createBook("Author 4","Title 4",400,
+                "0123456789444","Mobile Devices 4" );
+
+        createBook("Author 5","Title 5",500,
+                "0123456789555","Mobile Devices 5" );
     }
 
     @Override

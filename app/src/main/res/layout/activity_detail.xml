@@ -1,53 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".DetailActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title:" />
-
-    <TextView
-        android:id="@+id/author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Author:" />
-
-    <TextView
-        android:id="@+id/course"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Course:" />
-
-    <TextView
-        android:id="@+id/price"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:text="Price:" />
-
-    <TextView
-        android:id="@+id/isbn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_regular"
-        android:text="ISBN:"/>
-
-
-    <!--Buttons-->
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Button
             android:id="@+id/b1"
@@ -56,6 +24,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/button_books"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="showDetail"
             android:text="1"
             android:textColor="#929292"
             android:textSize="18sp" />
@@ -67,6 +36,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/button_books"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="showDetail"
             android:text="2"
             android:textColor="#929292"
             android:textSize="18sp" />
@@ -78,6 +48,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/button_books"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="showDetail"
             android:text="3"
             android:textColor="#929292"
             android:textSize="18sp" />
@@ -89,6 +60,7 @@
             android:layout_margin="8dp"
             android:background="@drawable/button_books"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="showDetail"
             android:text="4"
             android:textColor="#929292"
             android:textSize="18sp" />
@@ -100,9 +72,132 @@
             android:layout_margin="8dp"
             android:background="@drawable/button_books"
             android:fontFamily="@font/roboto_regular"
+            android:onClick="showDetail"
             android:text="5"
             android:textColor="#929292"
             android:textSize="18sp" />
+
     </LinearLayout>
 
-</LinearLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="252dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TextView
+            android:id="@+id/titleLabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Title:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/authorLabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:text="Author:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleLabel" />
+
+        <TextView
+            android:id="@+id/courseLabel"
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:text="Course:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorLabel" />
+
+        <TextView
+            android:id="@+id/priceLabel"
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:text="Price:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/courseLabel" />
+
+        <TextView
+            android:id="@+id/isbnLabel"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="ISBN:"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceLabel" />
+
+        <TextView
+            android:id="@+id/titleValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/titleLabel"
+            app:layout_constraintTop_toTopOf="@+id/titleLabel" />
+
+        <TextView
+            android:id="@+id/authorValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/authorLabel"
+            app:layout_constraintTop_toTopOf="@+id/authorLabel" />
+
+        <TextView
+            android:id="@+id/courseValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/courseLabel"
+            app:layout_constraintTop_toTopOf="@+id/courseLabel" />
+
+        <TextView
+            android:id="@+id/priceValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/priceLabel"
+            app:layout_constraintTop_toTopOf="@+id/priceLabel" />
+
+        <TextView
+            android:id="@+id/isbnValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            app:layout_constraintStart_toEndOf="@+id/isbnLabel"
+            app:layout_constraintTop_toTopOf="@+id/isbnLabel" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:onClick="showSummary"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</android.support.constraint.ConstraintLayout>
