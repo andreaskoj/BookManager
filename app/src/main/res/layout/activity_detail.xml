@@ -1,36 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DetailActivity">
 
     <TextView
         android:id="@+id/title"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Title:" />
+
     <TextView
         android:id="@+id/author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/title"/>
+
+        android:text="Author:" />
+
     <TextView
         android:id="@+id/course"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/author"/>
+
+        android:text="Course:" />
+
     <TextView
         android:id="@+id/price"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/course"/>
+
+        android:text="Price:" />
+
     <TextView
         android:id="@+id/isbn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/price"/>
+        android:fontFamily="@font/roboto_regular"
+        android:text="ISBN:"/>
 
 
-</RelativeLayout>
+    <!--Buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b1"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_books"
+            android:fontFamily="@font/roboto_regular"
+            android:text="1"
+            android:textColor="#929292"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/b2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_books"
+            android:fontFamily="@font/roboto_regular"
+            android:text="2"
+            android:textColor="#929292"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/b3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_books"
+            android:fontFamily="@font/roboto_regular"
+            android:text="3"
+            android:textColor="#929292"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/b4"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_books"
+            android:fontFamily="@font/roboto_regular"
+            android:text="4"
+            android:textColor="#929292"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/b5"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/button_books"
+            android:fontFamily="@font/roboto_regular"
+            android:text="5"
+            android:textColor="#929292"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -8,7 +8,7 @@ public class SimpleBookManager implements BookManagerInterfaces {
     private ArrayList<Book> bookList = new ArrayList<>();
 
     public SimpleBookManager() {
-        createBook("aaa","title1",100,"0123456789111","mobile devices 1" );
+        createBook("Bill Bryson","A Short History of Nearly Everything ",100,"0123456789111","mobile devices 1" );
         createBook("bbb","title2",239,"0123456789222","mobile devices 2" );
         createBook("ccc","title3",300,"0123456789333","mobile devices 3" );
         createBook("ddd","title4",400,"0123456789444","mobile devices 4" );
